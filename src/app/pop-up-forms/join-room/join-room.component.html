@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <span>Join ROOM</span>
+</mat-toolbar>
+<form #form="ngForm" (submit)="onSubmit(form)">
+    <mat-grid-list cols="2" rowHeight="450px">
+        <mat-grid-tile>
+            <div class="ctrl-container">
+                <mat-form-field>
+                    <mat-label>Class Title</mat-label>
+                    <input name="userName" #userName="ngModel" [(ngModel)]="service.EyeSonJoinRoomFormData.userName" matInput placeholder="Your_Name" >
+                </mat-form-field>
+                <button type="submit" mat-raised-button color="primary" >SCHEDULE</button>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</form>

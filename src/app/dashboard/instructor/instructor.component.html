@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>INSTRUCTOR</span>
+    </mat-toolbar>
+    <section>
+        <div class="example-label">Raised</div>
+        <div class="example-button-row">
+          <button mat-raised-button (click)="ScheduleClass()">Schedule Live Class</button>
+          <button mat-raised-button color="primary" (click)="JoinRoom()">Primary</button>
+          <button mat-raised-button color="accent">Accent</button>
+          <button mat-raised-button color="warn">Warn</button>
+          <button mat-raised-button disabled>Disabled</button>
+          <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+        </div>
+      </section>
+</mat-card>
