@@ -16,10 +16,15 @@
    </div>
 
 
-   <div class="cards">
+   <div class="cards" *ngIf ="this.service.Available == 2">
       
       <mat-card class="card">
          <app-instructor></app-instructor>
+      </mat-card>
+
+      <mat-card *ngFor="let i of this.service.courses" class="card">
+         <h3>course name : {{i.Coursename}}</h3>
+         <p>It's ID is {{i.CourseID}} and The Description is : {{i.Description}}</p> 
       </mat-card>
       
    </div>

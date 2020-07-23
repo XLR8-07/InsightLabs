@@ -1,29 +1,29 @@
 <mat-toolbar color="primary">
     <span>SCHEDULE A LIVE CLASS</span>
 </mat-toolbar>
-<form #form="ngForm" (submit)="onSubmit(form)">
+<form [formGroup]="this.service.ScheduleLiveClassFormData" (submit)="onSubmit()">
     <mat-grid-list cols="2" rowHeight="450px">
         <mat-grid-tile>
             <div class="ctrl-container">
                 <mat-form-field>
                     <mat-label>Class Title</mat-label>
-                    <input name="title" #title="ngModel" [(ngModel)]="service.ScheduleLiveClassFormData.title" matInput placeholder="Title" >
+                    <input formControlName="title" matInput placeholder="Title" >
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Timzone</mat-label>
-                    <input name="timezone" #timezone="ngModel" [(ngModel)]="service.ScheduleLiveClassFormData.timezone" matInput disabled value="GMT+6" >
+                    <input formControlName="timezone"  matInput disabled value="GMT+6" >
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Start Time</mat-label>
-                    <input name="start_time" #start_time="ngModel" [(ngModel)]="service.ScheduleLiveClassFormData.start_time" matInput placeholder="Example: 09:30AM" >
+                    <input formControlName="start_time" matInput placeholder="Example: 09:30AM" >
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>End Time</mat-label>
-                    <input name="end_time" #end_time="ngModel" [(ngModel)]="service.ScheduleLiveClassFormData.end_time" matInput placeholder="Example: 10:30AM" >
+                    <input formControlName="end_time"  matInput placeholder="Example: 10:30AM" >
                 </mat-form-field>
                 <mat-form-field color="accent" appearance="fill">
                     <mat-label>Date</mat-label>
-                    <input name="date" #date="ngModel" [(ngModel)]="service.ScheduleLiveClassFormData.date" matInput [matDatepicker]="picker2">
+                    <input formControlName="date" matInput [matDatepicker]="picker2" (dateInput)="addEvent($event.value)">
                     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                     <mat-datepicker #picker2 color="primary"></mat-datepicker>
                   </mat-form-field>

@@ -1,2 +1,7 @@
+<Div>Im an instructor component</Div>
 <button mat-raised-button (click)="ScheduleClass()">Schedule Live Class</button>
 <button mat-raised-button color="primary" (click)="JoinRoom()">Primary</button>
+<button mat-raised-button color="primary" (click)="EnterRoomT()">Join Class Teacher</button>
+<button mat-raised-button color="primary" (click)="EnterRoomS()">Join Class Student</button>
+<button mat-raised-button color="primary" (click)="this.service.getUsers()">Get User</button>
+<button mat-raised-button color="primary" (click)="ChangeUser()">Change User</button>
